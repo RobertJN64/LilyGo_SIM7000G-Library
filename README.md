@@ -73,3 +73,12 @@ void loop() {
 ```
 
 If you don't need HTTPS, remove the https_client and use http_client instead.
+
+## GPS
+```cpp
+enable_gps();
+GPS gps = get_gps();
+Serial.println(String(gps.lat, 6));
+Serial.println(String(gps.lon, 6));
+Serial.println(gps.time_str); //YYYY-MM-DD HH:MM:SS
+```
